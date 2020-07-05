@@ -31,6 +31,8 @@ $(document).ready(function($) {
   $('#prep').fadeOut();  
   $('#trip-plan').fadeOut();
   $('#about').fadeOut();
+  $('.modal-box').fadeOut();
+  $('.modal-bg').fadeOut();
   $('#home').delay(250).fadeIn();
   console.log("home");
   }
@@ -43,6 +45,8 @@ $(document).ready(function($) {
   $('#prep').fadeOut();
   $('#trip-plan').fadeOut();
   $('#about').fadeOut();
+  $('.modal-box').fadeOut();
+  $('.modal-bg').fadeOut();
   $('#japan').delay(250).fadeIn();
   console.log("jap");0
   }
@@ -55,6 +59,8 @@ $(document).ready(function($) {
   $('#japan').fadeOut();
   $('#trip-plan').fadeOut();
   $('#about').fadeOut();
+  $('.modal-box').fadeOut();
+  $('.modal-bg').fadeOut();
   $('#prep').delay(250).fadeIn();
   console.log("prep");0
   }
@@ -67,6 +73,8 @@ $(document).ready(function($) {
   $('#japan').fadeOut();
   $('#prep').fadeOut();
   $('#about').fadeOut();
+  $('.modal-box').fadeOut();
+  $('.modal-bg').fadeOut();
   $('#trip-plan').delay(250).fadeIn();
   console.log("trip");0
   }
@@ -78,6 +86,8 @@ $(document).ready(function($) {
   $('#japan').fadeOut();
   $('#prep').fadeOut();
   $('#trip-plan').fadeOut();
+  $('.modal-box').fadeOut();
+  $('.modal-bg').fadeOut();
   $('#about').delay(250).fadeIn();
   console.log("about");0
   }
@@ -121,6 +131,8 @@ $(document).ready(function($) {
     $('#home').delay(250).fadeIn();
     $('.modal-bg').fadeIn();
     $('.modal-box').fadeIn();
+    let set_height = $('#home').height();
+    $('.modal-bg').height(set_height);
   });
 
   $('#calc-app-close').click(function(){
