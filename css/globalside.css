@@ -1,0 +1,555 @@
+.top-back
+{
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 11;
+}
+
+.top-bord
+{
+    background: #be0029;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 3px;
+    height: 3px;
+    z-index: 11;
+}
+
+.right-bord
+{
+    background: #be0029;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    right: 0;
+    z-index: 10;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: auto;
+    word-wrap: break-word;
+    font-family: 'Roboto', sans-serif;
+} 
+
+.sb-position
+{
+    position: fixed;
+    width: 16.6%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #be0029; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff; 
+}
+
+
+.sb-style
+{
+    border-right: 3px solid #be0029;
+}
+
+.sb-position > .mb-5
+{
+    font-size: 2rem;
+}
+
+.sb-position > .mb-5 > .btn-style
+{
+    height: 10rem;
+}
+
+.mb-style
+{
+    background-color: white;
+}
+
+.btn-style
+{
+    display: block;
+    color: #be0029;
+    width: 99.5%;
+    height: 3.5rem;
+    padding-top: 6%;
+    padding-left: 10%;
+    transition: all 0.5s ;
+}
+
+.btn-style:hover
+{
+    background-color: #be0029 ;
+    color: white;
+    text-decoration: none; 
+}
+
+.btn-style-main
+{
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+    width: 11rem;
+    height: 11rem;
+    transition: all 0.5s;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 1px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.btn-img1
+{
+    background-image: url(topspots.jpg);
+}
+.btn-img2
+{
+    background-image: url(documents.jpg);
+}
+.btn-img3
+{
+    background-image: url(lang.jpg);
+}
+.btn-img4
+{
+    background-image: url(calc.jpg);
+}
+
+.btn-style-main:hover
+{
+    color: white;
+    opacity: 0.7;
+    text-decoration: none; 
+    transform: translateY(-10px);
+}
+
+.wallpaper
+{
+    background-image: url(main.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.wallpaper h1
+{
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    font-size: 10vh;
+    padding-top: 20vh;
+}
+
+.welcome-content
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 50vh;
+    vertical-align: middle;
+}
+
+.welcome-top
+{
+    height: 50vh;
+    vertical-align: middle;
+}
+
+.dot
+{
+    color: #be0029;
+}
+
+
+h2
+{
+    font-weight: bold;
+    background-color: #be0029;
+    color: white;
+    padding: 15px 15px;
+}
+
+.normal-text
+{
+    font-size: 1.25rem;
+}
+
+.navbar
+{
+    display: none;
+}
+
+.progress
+{
+    top: 0;
+    position: fixed;
+    height: 3px;
+    width: 0%;
+    background-color: #be0029;
+    border-radius: 0;
+    z-index: 1030;
+}
+
+#calc-app-site
+{
+    display: inline-block;
+    background-color: #be0029;
+    color: #fff;
+    padding: 15px;
+    transition: all 0.5s;
+}
+
+#calc-app-site:hover
+{
+    box-shadow: #7c001b 7.5px 7.5px;
+    text-decoration: none;
+}
+
+.modal-bg
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: none;
+}
+
+.modal-box
+{
+    background: white;
+    height: 75vh;
+    width: 75vw;
+    position: relative;
+    top: 12.5vh;
+    border: 2px solid #be0029;
+    display: none;
+}
+
+input[type=text]
+{
+    border: 1px solid #be0029;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    color: gray;
+    margin-bottom: 7.5vh;
+    width: 15vw;
+}
+
+#currencyType > span
+{
+    font-weight: bold;
+    font-family: 'Calibri', sans-serif;
+    position: relative;
+    top: -15px;
+}
+
+input:focus 
+{
+    outline:none;
+}
+
+.input-title
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    bottom: -2.5px;
+    font-size: 0.75rem;
+    font-family: 'Calibri', sans-serif;
+}
+
+.display-4
+{
+    font-size: 3vw;
+}
+
+.btn-modal
+{
+    display: inline-block;
+    background-color: #be0029;
+    color: #ffffff!important;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    position: relative;
+    top: -5vh;
+}
+
+.btn-modal:hover
+{
+    opacity: 0.7;
+}
+
+.icon-color
+{
+    color: black;
+} 
+
+#calc-pages
+{
+    height: 55vh;
+    width: 75vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.graph-content
+{
+    height: 37.5vh;
+}
+
+.graph-label
+{
+    font-weight: bold;
+    transform: rotate(-30deg);
+    position: relative;
+    top: 20px;
+    font-size: 1.1vw;
+}
+
+.graph-label-phone
+{
+    font-weight: bold;
+    transform: rotate(-30deg);
+    position: relative;
+    top: 20px;
+    font-size: 4vw;
+}
+
+.graph1
+{
+    background-color: #be0029; 
+    height: 1%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: all 0.5s;
+}
+
+.graph1:hover, .graph2:hover, .graph3:hover, .graph4:hover
+{
+    background-color: gray;
+}
+
+.graph2
+{
+   background-color: #be0029; 
+   height: 1%;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   transition: all 0.5s;
+}
+
+.graph3
+{
+   background-color: #be0029; 
+   height: 1%;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   transition: all 0.5s;
+}
+
+.graph4
+{
+   background-color: #be0029; 
+   height: 1%;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+   transition: all 0.5s;
+}
+
+#graphPhone
+{
+    display: none;
+}
+
+#about
+{
+    min-height: 100vh;
+}
+
+/* HOME PAGE RESPONSIVE FOR ONE COLUMNT SMARTPHONES */
+@media (max-width: 420px)
+{
+    .wallpaper
+    {
+        height: 800px;
+    }
+
+    .wallpaper h1
+    {
+        font-size: 1.75rem;
+        padding-top: 160px;
+    }
+
+    .welcome-content
+    {
+        height: 400px;
+    }
+
+    .welcome-top
+    {
+        height: 400px;
+    }
+
+}
+
+/* FONT CHANGE */
+@media (max-width: 600px)
+{
+    .wallpaper h1
+    {
+        font-size: 3rem;
+    }
+
+    .modal-box h2
+    {
+        font-size: 1.12rem;
+    }
+
+    .btn-modal
+    {
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    }
+
+    input[type=text]
+    {
+    margin-bottom: 0vh;
+    }
+
+    .calc-page1 > .row > .col-12 > p
+    {
+    font-size: 0.75rem;
+    }
+
+    .calc-page3
+    {
+    font-size: 0.7rem;
+    }
+
+    #graphPhone
+    {
+        display: contents;
+    }
+
+    #graphPC, #graphPClabels
+    {
+        display: none;
+    }
+
+}
+
+/* SIDEBAR NONE, NAVBAR VISIBLE, CONTENT BEFORE TITLE */
+@media (max-width: 765px)
+{
+    .sb-style
+    {
+        display: none;
+    }
+
+    .navbar
+    {
+        display: contents;
+    }
+
+    .fixed-top
+    {
+        border-bottom: 3px solid #be0029;
+        background-color: white;
+    }
+
+    .navbar-brand, .nav-link, .dropdown-item
+    {
+        margin-left: 5%;
+        display: inline-block;
+        color: #be0029!important;
+        width: 75%;
+    }
+
+    .navbar-toggler
+    {
+        border: 0;
+        color: #be0029!important;
+    }    
+    
+    #japan::before, #prep::before, #trip-plan::before, #about::before
+    {
+        content: "";
+        display: block;
+        height: 42.5px;
+    }
+    
+}
+
+/* AJUST SIDEBAR AND MAIN BUTTONS TO RESOLUTION */
+@media (max-width: 1000px)
+{
+    .btn-style-main
+    {
+        width: 11rem;
+        height: 4rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }  
+    .btn-style
+    {
+        height: 2.5rem;
+    }  
+    .sb-position > .mb-5
+    {
+        font-size: 1.75rem;
+    }
+    .sb-position p
+    {
+        font-size: 0.85rem;
+    }
+}
+
+/* FOR BIG RESOLUTION MAIN BUTTONS ARE BIGGER */
+@media (min-width: 1900px)
+{
+    .btn-style-main
+    {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 15px;
+        font-size: 1.25rem;
+    }  
+}
