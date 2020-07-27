@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -39,7 +40,7 @@
               </p>
 
               <p class="my-1">
-                <a class="btn-style" href="#" id="about-btn"><i class="fas fa-cloud"></i></i> .about</a>
+                <a class="btn-style" href="#" id="about-btn"><i class="fas fa-cloud"></i> .about</a>
               </p>
           </div>
         </div>
@@ -69,6 +70,7 @@
                     </li>
                   </ul>
               </div>
+            </div>
           </nav>
         </div>
 
@@ -127,22 +129,22 @@
                   </ol>
                   <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                      <img class="w-100" src="css/1.JPG" alt="1 slide">
+                      <img class="w-100" src="css/1.JPG" alt="1 slide, photo of scenery from Japan">
                     </div>
                     <div class="carousel-item">
-                      <img class="w-100" src="css/2.JPG" alt="2 slide">
+                      <img class="w-100" src="css/2.JPG" alt="2 slide, photo of scenery from Japan">
                     </div>
                     <div class="carousel-item">
-                      <img class="w-100" src="css/3.JPG" alt="3 slide">
+                      <img class="w-100" src="css/3.JPG" alt="3 slide, photo of scenery from Japan">
                     </div>
                     <div class="carousel-item">
-                      <img class="w-100" src="css/4.JPG" alt="4 slide">
+                      <img class="w-100" src="css/4.JPG" alt="4 slide, photo of scenery from Japan">
                     </div>
                     <div class="carousel-item">
-                      <img class="w-100" src="css/6.JPG" alt="5 slide">
+                      <img class="w-100" src="css/6.JPG" alt="5 slide, photo of scenery from Japan">
                     </div>
                     <div class="carousel-item">
-                      <img class="w-100" src="css/7.JPG" alt="6 slide">
+                      <img class="w-100" src="css/7.JPG" alt="6 slide, photo of scenery from Japan">
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -170,7 +172,7 @@
                   <li>The Ryukyu Islands and Nanpō Islands have a subtropical climate, with warm winters and hot summers. Precipitation is very heavy, especially during the rainy season.
                   </li>
                 </ul>
-
+              </div>
             </section>
 
             <section id="prep">
@@ -259,13 +261,11 @@
               <h2 class="pb-3"><i class="fas fa-cloud d-inline-flex pr-3" aria-hidden="true"></i> .about</h2>
               <div class="container">
                   <p class="normal-text mt-5">This website is designed for every one who would like to travel to Japan, but still don't know everything, especialy about preparation and cost of traveling.</p>
-                  <p class="normal-text mt-5">Built with HTML, CSS, JavaScript with jQuery and Bootstrap 4 frameworks. Photos from "https://o-dan.net/en/" (for commercial use and for uncommercial use) or made by website creator.</p>
-                  <p class="normal-text">By Marek Smieja</p>
-                  <p class="normal-text">Link</p>
-                  <div class="text-center"><i class="fab fa-html5 fa-7x mx-5"></i><i class="fab fa-css3-alt fa-7x mx-5"></i><i class="fab fa-js fa-7x mx-5"></i><i class="fab fa-bootstrap fa-7x mx-5"></i>
+                  <p class="normal-text mt-5">Built with HTML, CSS, JavaScript with jQuery and Bootstrap 4 frameworks. Photos from "https://o-dan.net/en/" or made by website developer.</p>
+                  <div class="text-center"><i class="fab fa-html5 fa-3x mx-5"></i><i class="fab fa-css3-alt fa-3x mx-5"></i><i class="fab fa-js fa-3x mx-5"></i><i class="fab fa-bootstrap fa-3x mx-5"></i>
+                    <p class="normal-text mt-5">By Marek Smieja</p>
+                    <p class="normal-text">Portfolio</p>
                   </div>
-
-
               </div>
             </section>
 
@@ -279,36 +279,36 @@
             <div class="modal-box text-center mx-auto">
               <h2 class="pb-3"><i class="fas fa-calculator d-inline-flex pr-3" aria-hidden="true"></i> Travel cost calculator</h2>
               <section id="calc-pages">
-                <div class="calc-page1 active">
+                <div class="calc-page1 h-100 active">
                   <div class="row h-100 d-flex align-items-center justify-content-center">
                     <div class="col-12">
                       <h3 class="mb-5">General information</h3>
                       <p>Please remember, any information you will get, you can use only on your responsibility, like as currenty exchange raito, JRPass cost etc.</p>
                       <p class="mb-3">Choose your currency:</p>
                       <form id="currencyType">
-                        <label><input type="radio" name="currency" id="" value="PLN" class="radio_style mr-1" checked><span class="mr-3 span_check">PLN</span></label>
-                        <label><input type="radio" name="currency" id="" value="EUR" class="radio_style mr-1"><span class="mr-3 span_check">EUR</span></label>
-                        <label><input type="radio" name="currency" id="" value="YEN" class="radio_style mr-1"><span class="span_check">YEN</span></label>
+                        <label><input type="radio" name="currency" value="PLN" class="radio_style mr-1" checked><span class="mr-3 span_check">PLN</span></label>
+                        <label><input type="radio" name="currency" value="EUR" class="radio_style mr-1"><span class="mr-3 span_check">EUR</span></label>
+                        <label><input type="radio" name="currency" value="YEN" class="radio_style mr-1"><span class="span_check">YEN</span></label>
                       </form>
                     </div>
                   </div>
                 </div> 
-                <div class="calc-page2">
+                <div class="calc-page2 h-100 ">
                   <div class="row h-100 d-flex align-items-center justify-content-center">
                     <div class="col-7">
                       <form id="nightcalc">
                         <div class="row justify-content-around">
                           <div class="col-6-sm align-self-center mr-1">
                             <p class="input-title mt-1">Flight ticket cost</p>
-                            <input type="text" name="flightcost" id="" value="0">
+                            <input type="text" name="flightcost" value="0">
                             <p class="input-title mt-1">Insurance cost</p>
-                            <input type="text" name="insucost" id="" value="0">
+                            <input type="text" name="insucost" value="0">
                           </div>
                           <div class="col-6-sm align-self-center ml-1">
                             <p class="input-title mt-1">Av. accomodation cost per night</p>
-                            <input type="text" name="nightcost" id="" value="0">
+                            <input type="text" name="nightcost" value="0">
                             <p class="input-title mt-1">Number of nights</p>
-                            <input type="text" name="nightno" id="" value="0">
+                            <input type="text" name="nightno" value="0">
                           </div>
                         </div>
                       </form>
@@ -320,30 +320,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="calc-page3">
+                <div class="calc-page3 h-100 ">
                   <div class="row h-100 d-flex align-items-center justify-content-center">
                     <div class="col-7">
                       <form id="jrpass">
                         <p class="input-title mt-3 mb-2">Do you want to buy Japanese Rail Pass?</p>
-                        <label><input type="radio" name="type0" id="" value="jrN" class="radio_style" checked><span class="mr-1 span_check">No</span></label>
-                        <label><input type="radio" name="type0" id="" value="jrY" class="radio_style"><span class="mr-1 span_check">Yes</span></label>
+                        <label><input type="radio" name="type0" value="jrN" class="radio_style" checked><span class="mr-1 span_check">No</span></label>
+                        <label><input type="radio" name="type0" value="jrY" class="radio_style"><span class="mr-1 span_check">Yes</span></label>
                         
                         <section id="type1">
                           <p class="input-title mt-3 mb-2">Type of ticket - adult/child</p>
-                          <label><input type="radio" name="type1" id="" value="adult" class="radio_style"><span class="mr-1 span_check">Adult</span></label>
-                          <label><input type="radio" name="type1" id="" value="child" class="radio_style"><span class="mr-1 span_check">Child</span></label>
+                          <label><input type="radio" name="type1" value="adult" class="radio_style"><span class="mr-1 span_check">Adult</span></label>
+                          <label><input type="radio" name="type1" value="child" class="radio_style"><span class="mr-1 span_check">Child</span></label>
   
                         </section>
                         <section id="type2">
                           <p class="input-title mt-3 mb-1">Type of ticket - normal/green(premium)</p>
-                          <label><input type="radio" name="type2" id="" value="normal" class="radio_style"><span class="mr-1 span_check">Normal</span></label>
-                          <label><input type="radio" name="type2" id="" value="green" class="radio_style"><span class="mr-1 span_check">Green</span></label>
+                          <label><input type="radio" name="type2" value="normal" class="radio_style"><span class="mr-1 span_check">Normal</span></label>
+                          <label><input type="radio" name="type2" value="green" class="radio_style"><span class="mr-1 span_check">Green</span></label>
                         </section>
                         <section id="type3">
                           <p class="input-title mt-3 mb-1">Number of days</p>
-                          <label><input type="radio" name="type3" id="" value="7" class="radio_style"><span class="mr-1 span_check">7</span></label>
-                          <label><input type="radio" name="type3" id="" value="14" class="radio_style"><span class="mr-1 span_check">14</span></label>
-                          <label><input type="radio" name="type3" id="" value="21" class="radio_style"><span class="mr-1 span_check">21</span></label>
+                          <label><input type="radio" name="type3" value="7" class="radio_style"><span class="mr-1 span_check">7</span></label>
+                          <label><input type="radio" name="type3" value="14" class="radio_style"><span class="mr-1 span_check">14</span></label>
+                          <label><input type="radio" name="type3" value="21" class="radio_style"><span class="mr-1 span_check">21</span></label>
                         </section>
 
 
@@ -356,14 +356,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="calc-page4">
+                <div class="calc-page4 h-100 ">
                   <div class="row h-100 d-flex align-items-center justify-content-center">
                     <div class="col-7">
                         <div id="graphPC" class="row align-items-end graph-content">
-                          <div class="col-3"><section class="graph1" data-toggle="tooltip"></section></div>
-                          <div class="col-3"><section class="graph2" data-toggle="tooltip"></section></div>
-                          <div class="col-3"><section class="graph3" data-toggle="tooltip"></section></div>
-                          <div class="col-3"><section class="graph4" data-toggle="tooltip"></section></div>
+                          <div class="d-flex align-items-end col-3 h-100"><section class="w-100 graph1" data-toggle="tooltip"></section></div>
+                          <div class="d-flex align-items-end col-3 h-100"><section class="w-100 graph2" data-toggle="tooltip"></section></div>
+                          <div class="d-flex align-items-end col-3 h-100"><section class="w-100 graph3" data-toggle="tooltip"></section></div>
+                          <div class="d-flex align-items-end col-3 h-100"><section class="w-100 graph4" data-toggle="tooltip"></section></div>
 
                         </div>
                         <div id="graphPClabels" class="row mb-5">
@@ -403,7 +403,6 @@
                 <a class="btn-modal ml-5" id="next-page"><i class="fas fa-arrow-right    "></i></a>
               </div>
             </div>
-            </div>
           </div>
         </section>
 
@@ -411,9 +410,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="code.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script> -->
+    <script src="code.js"></script>
+
   </body>
 </html>

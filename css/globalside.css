@@ -34,6 +34,8 @@ html
 {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #be0029 #fff; /*white scroll, black bg*/
 }
 
 body
@@ -47,13 +49,19 @@ body
 {
     position: fixed;
     width: 16.6%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overflow-x: hidden;
     top: 0;
     bottom: 0;
-
-
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
 }
+
+.sb-position::-webkit-scrollbar {
+    display: none;
+  }
 
 /* width */
 ::-webkit-scrollbar {
@@ -69,7 +77,6 @@ body
 ::-webkit-scrollbar-thumb {
     background: #fff; 
 }
-
 
 .sb-style
 {
@@ -235,7 +242,7 @@ h2
 
 .modal-bg
 {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -272,7 +279,7 @@ input[type=text]
     position: relative;
     cursor: pointer;
     display: inline-block;
-    margin: 0 20 0 3;
+    margin: 0 20px 0 3px;
     padding: 0 0 0 30px;
     color: #333333;
 }
@@ -309,7 +316,7 @@ input[type=text]
     opacity: 0;
     position: absolute;
     top: 50%;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
 }
 
 .radio_style
@@ -519,7 +526,7 @@ input:focus
 
     #graphPhone
     {
-        display: contents;
+        display: block;
     }
 
     #graphPC, #graphPClabels
@@ -539,7 +546,9 @@ input:focus
 
     .navbar
     {
-        display: contents;
+        padding: 0;
+        display: block;
+        background-color: #fff!important;
     }
 
     .fixed-top
@@ -571,7 +580,7 @@ input:focus
 
     .span_check
     {
-        margin: 0 20 0 3;
+        margin: 0 20px 0 3px;
         padding: 0 0 0 20px;
     }
 

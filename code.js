@@ -34,7 +34,6 @@ $(document).ready(function($) {
   $('.modal-box').fadeOut();
   $('.modal-bg').fadeOut();
   $('#home').delay(250).fadeIn();
-  console.log("home");
   }
 
   document.getElementById("japan-btn").onclick = function() {showJap()};
@@ -48,7 +47,6 @@ $(document).ready(function($) {
   $('.modal-box').fadeOut();
   $('.modal-bg').fadeOut();
   $('#japan').delay(250).fadeIn();
-  console.log("jap");0
   }
 
   document.getElementById("prep-btn").onclick = function() {showPrep()};
@@ -62,7 +60,6 @@ $(document).ready(function($) {
   $('.modal-box').fadeOut();
   $('.modal-bg').fadeOut();
   $('#prep').delay(250).fadeIn();
-  console.log("prep");0
   }
 
   document.getElementById("trip-btn").onclick = function() {showTrip()};
@@ -76,7 +73,6 @@ $(document).ready(function($) {
   $('.modal-box').fadeOut();
   $('.modal-bg').fadeOut();
   $('#trip-plan').delay(250).fadeIn();
-  console.log("trip");0
   }
 
   document.getElementById("about-btn").onclick = function() {showAbout()};
@@ -89,7 +85,6 @@ $(document).ready(function($) {
   $('.modal-box').fadeOut();
   $('.modal-bg').fadeOut();
   $('#about').delay(250).fadeIn();
-  console.log("about");0
   }
 
 
@@ -116,8 +111,8 @@ $(document).ready(function($) {
   window.onscroll = function() {slide()};
   var slide = function()
   {
-    var height = document.body.scrollHeight - window.screen.height;
-    var scroll = document.body.scrollTop;
+    var height = document.documentElement.scrollHeight - window.screen.height;
+    var scroll = document.documentElement.scrollTop;
     var position = (scroll / height) * 100;
     document.getElementById("slidebar").style.width = position + "%";
   }
@@ -158,7 +153,6 @@ $(document).ready(function($) {
       $('#page1').css("padding", "15px").addClass('active-btn');
       $('#page2, #page3, #page4, #page5').css("padding", "10px").removeClass('active-btn');
     });
-    console.log("page1");
   });
 
   $("#page2").click(function(){
@@ -167,7 +161,6 @@ $(document).ready(function($) {
       $('#page2').css("padding", "15px").addClass('active-btn');
       $('#page1, #page3, #page4, #page5').css("padding", "10px").removeClass('active-btn');
     });
-    console.log("page2");
   });
 
   $("#page3").click(function(){
@@ -176,7 +169,6 @@ $(document).ready(function($) {
       $('#page3').css("padding", "15px").addClass('active-btn');
       $('#page1, #page2, #page4, #page5').css("padding", "10px").removeClass('active-btn');
     });
-    console.log("page3");
   });
 
   $("#page4").click(function(){
@@ -185,7 +177,6 @@ $(document).ready(function($) {
       $('#page4').css("padding", "15px").addClass('active-btn');
       $('#page1, #page2, #page3, #page5').css("padding", "10px").removeClass('active-btn');
     });
-    console.log("page4");
   });
 
   $('#next-page').click(function(){
@@ -202,7 +193,6 @@ $(document).ready(function($) {
 
   //disable arrow button when page4 is active
   $('.modal-box').click(function(){
-    console.log("modal klik");
     setTimeout(function() {
       if ( $('.calc-page4').hasClass('active') ) {
         document.getElementById("next-page").style.backgroundColor = "grey";
@@ -238,22 +228,18 @@ $(document).ready(function($) {
   if (isNaN(night))
   {
     night = 0;
-    console.log("NaN");
   }
   if (isNaN(insu))
   {
     insu = 0;
-    console.log("NaN");
   }
   if (isNaN(flightcost))
   {
     flightcost = 0;
-    console.log("NaN");
   }
   if (isNaN(price))
   {
     price = 0;
-    console.log("NaN");
   }
 
   //jrpass checking - different type with different price
@@ -344,8 +330,6 @@ $(document).ready(function($) {
     }
 
   }
-  console.log(price);
-
 
   switch ( document.querySelector("input[name=currency]:checked").value )
   {
