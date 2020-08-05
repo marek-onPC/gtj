@@ -2,7 +2,7 @@
 
 $(document).ready(function($) {
 
-  //loading at start only #home page
+  //Loading at start only #home page
   $('#home').show();
   $('#japan').hide();
   $('#prep').hide();
@@ -23,7 +23,7 @@ $(document).ready(function($) {
   });
 
 
-  //sidebar/navbar changing site
+  //Sidebar/navbar opening new page and closing rest of the pages
   document.getElementById("home-btn").onclick = function() {showHome()};
   document.getElementById("home-btn-phone").onclick = function() {showHome()};
   function showHome(){
@@ -88,7 +88,7 @@ $(document).ready(function($) {
   }
 
 
-  //hiding sidebar and changing main content on full width when 765px
+  //Hiding sidebar and changing main content on full width when 765px by changing the booststrap classes
   var x = window.matchMedia("(max-width: 765px)");
   x.onchange = function() {hide(x)};
   var hide = function(x){
@@ -107,7 +107,7 @@ $(document).ready(function($) {
       document.getElementById("main-cont").className = "mb-style col-10 px-0 mx-0";
   }
 
-  //top progress bar
+  //Top progress bar
   window.onscroll = function() {slide()};
   var slide = function()
   {
@@ -117,7 +117,7 @@ $(document).ready(function($) {
     document.getElementById("slidebar").style.width = position + "%";
   }
 
-  //modal window and bg fadein/out
+  //mMdal window and background fadein/out
   $('#calc-app, #calc-app-site').click(function(){
     $('#japan').fadeOut();
     $('#prep').fadeOut();  
@@ -135,7 +135,7 @@ $(document).ready(function($) {
     $('.modal-bg').fadeOut();
   });
 
-  //modal window close when click on bg
+  //mMdal window close when clicking on background
   $('.modal-bg').click(function(e)
   {
     if (e.target !== this)
@@ -146,7 +146,7 @@ $(document).ready(function($) {
     $('.about-box').fadeOut();
   });
 
-  //modal window calc-page change sites (by changing class) with button size change
+  //Modal window changing pages (by changing class) with button size change by pressing button
   $("#page1").click(function(){
     $('.calc-page2, .calc-page3, .calc-page4, .calc-page5').fadeOut(100).removeClass('active').promise().done(function(){
       $('.calc-page1').fadeIn(100).addClass('active');
@@ -206,7 +206,7 @@ $(document).ready(function($) {
   });
   
 
-  //night cost calc
+  //Trip cost calculator app - update value on change of the input
   document.getElementById('nightcalc').nightcost.oninput = function() {calc()};
   document.getElementById('nightcalc').nightno.oninput = function() {calc()};
   document.getElementById('nightcalc').flightcost.oninput = function() {calc()};
@@ -215,14 +215,13 @@ $(document).ready(function($) {
   document.getElementById('currencyType').onclick = function() {calc()};
   document.getElementById('jrpass').onclick = function() {calc()};
 
+  //Trip cost function
   function calc(){
   var flightcost = parseFloat(document.getElementById('nightcalc').flightcost.value.replace(",","."));
   var insu = parseFloat(document.getElementById('nightcalc').insucost.value.replace(",","."));
   var cost = document.getElementById('nightcalc').nightcost.value.replace(",",".");
   var no = document.getElementById('nightcalc').nightno.value.replace(",",".");
   var night = parseFloat(cost * no);
-  // var flight = parseFloat(night) + parseFloat(flightcost);
-  //jrpass price in solver is in euro 
   var price;
   
   if (isNaN(night))
@@ -242,7 +241,8 @@ $(document).ready(function($) {
     price = 0;
   }
 
-  //jrpass checking - different type with different price
+  //JR pass price is in EURO (price variable)
+  //JR pass radio options checking - different type of ticket with different price
   if  ( document.querySelector("input[name=type0]:checked").value === "jrN")
   {
     $("#type1").hide();
@@ -331,9 +331,11 @@ $(document).ready(function($) {
 
   }
 
+  //Different operations - depends on type of currency defined by user
   switch ( document.querySelector("input[name=currency]:checked").value )
   {
     case 'PLN':
+      //Accomodation, insurance, and flight cost
       var totalnightPLN = parseFloat((night+flightcost+insu)).toFixed(2) + " PLN";
       var totalnightEUR = parseFloat((night+flightcost+insu)/4.3).toFixed(2) + " EUR";
       var totalnightYEN = parseFloat((night+flightcost+insu)*28.3).toFixed(2) + " YEN";
@@ -344,6 +346,7 @@ $(document).ready(function($) {
       document.getElementById("nighttotalYEN").style.color = "grey";
       document.getElementById("nighttotalPLN").style.color = "black";
 
+      //Japanese Rail Pass cost (ticket for trains)
       var jrpassPLN = parseFloat(price*4.3).toFixed(2) + " PLN";
       var jrpassEUR = parseFloat(price).toFixed(2) + " EUR";
       var jrpassYEN = parseFloat(price*121).toFixed(2) + " YEN";
@@ -354,6 +357,7 @@ $(document).ready(function($) {
       document.getElementById("jrpassYEN").style.color = "grey";
       document.getElementById("jrpassPLN").style.color = "black";
 
+      //Total cost of trip
       var totalPLN = parseFloat(night+flightcost+insu+(price*4.3)).toFixed(2) + " PLN";
       var totalEUR = parseFloat(((night+flightcost+insu)/4.3)+price).toFixed(2) + " EUR";
       var totalYEN = parseFloat(((night+flightcost+insu)*28.3)+(price*121)).toFixed(2) + " YEN";
@@ -364,6 +368,7 @@ $(document).ready(function($) {
       document.getElementById("totalYEN").style.color = "grey";
       document.getElementById("totalPLN").style.color = "black";
 
+      //Value of % for graphs at the end
       var flightPER = parseFloat(flightcost*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*4.3)).toFixed(2);
       var nightPER = parseFloat(night*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*4.3)).toFixed(2);
       var insurPER = parseFloat(insu*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*4.3)).toFixed(2);
@@ -372,6 +377,7 @@ $(document).ready(function($) {
       break
 
     case 'EUR':
+      //Accomodation, insurance, and flight cost
       var totalnightPLN = parseFloat((night+flightcost+insu)*4.3).toFixed(2) + " PLN";
       var totalnightEUR = parseFloat((night+flightcost+insu)).toFixed(2) + " EUR";
       var totalnightYEN = parseFloat((night+flightcost+insu)*121).toFixed(2) + " YEN";
@@ -382,6 +388,7 @@ $(document).ready(function($) {
       document.getElementById("nighttotalYEN").style.color = "grey";
       document.getElementById("nighttotalEUR").style.color = "black";
 
+      //Japanese Rail Pass cost (ticket for trains)
       var jrpassPLN = parseFloat(price*4.3).toFixed(2) + " PLN";
       var jrpassEUR = parseFloat(price).toFixed(2) + " EUR";
       var jrpassYEN = parseFloat(price*121).toFixed(2) + " YEN";
@@ -392,6 +399,7 @@ $(document).ready(function($) {
       document.getElementById("jrpassYEN").style.color = "grey";
       document.getElementById("jrpassPLN").style.color = "grey";
 
+      //Total cost of trip
       var totalPLN = parseFloat(((night+flightcost+insu)*4.3)+(price*4.3)).toFixed(2) + " PLN";
       var totalEUR = parseFloat(night+flightcost+insu+price).toFixed(2) + " EUR";
       var totalYEN = parseFloat(((night+flightcost+insu)*121)+(price*121)).toFixed(2) + " YEN";
@@ -402,6 +410,7 @@ $(document).ready(function($) {
       document.getElementById("totalYEN").style.color = "grey";
       document.getElementById("totalPLN").style.color = "grey";
 
+      //Value of % for graphs at the end
       var flightPER = parseFloat(flightcost*100).toFixed(2)/parseFloat(night+flightcost+insu+price).toFixed(2);
       var nightPER = parseFloat(night*100).toFixed(2)/parseFloat(night+flightcost+insu+price).toFixed(2);
       var insurPER = parseFloat(insu*100).toFixed(2)/parseFloat(night+flightcost+insu+price).toFixed(2);
@@ -410,6 +419,7 @@ $(document).ready(function($) {
       break
 
     case 'YEN':
+      //Accomodation, insurance, and flight cost
       var totalnightPLN = parseFloat((night+flightcost+insu)*0.035).toFixed(2) + " PLN";
       var totalnightEUR = parseFloat((night+flightcost+insu)*0.0082).toFixed(2) + " EUR";
       var totalnightYEN = parseFloat((night+flightcost+insu)).toFixed(2) + " YEN";
@@ -420,6 +430,7 @@ $(document).ready(function($) {
       document.getElementById("nighttotalPLN").style.color = "grey";
       document.getElementById("nighttotalYEN").style.color = "black";
 
+      //Japanese Rail Pass cost (ticket for trains)
       var jrpassPLN = parseFloat(price*4.3).toFixed(2) + " PLN";
       var jrpassEUR = parseFloat(price).toFixed(2) + " EUR";
       var jrpassYEN = parseFloat(price*121).toFixed(2) + " YEN";
@@ -430,6 +441,7 @@ $(document).ready(function($) {
       document.getElementById("jrpassYEN").style.color = "black";
       document.getElementById("jrpassPLN").style.color = "grey";
 
+      //Total cost of trip
       var totalPLN = parseFloat(((night+flightcost+insu)*0.035)+(price*4.3)).toFixed(2) + " PLN";
       var totalEUR = parseFloat(((night+flightcost+insu)*0.0082)+price).toFixed(2) + " EUR";
       var totalYEN = parseFloat((night+flightcost+insu)+(price*121)).toFixed(2) + " YEN";
@@ -440,6 +452,7 @@ $(document).ready(function($) {
       document.getElementById("totalYEN").style.color = "black";
       document.getElementById("totalPLN").style.color = "grey";
 
+      //Value of % for graphs at the end
       var flightPER = parseFloat(flightcost*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*121)).toFixed(2);
       var nightPER = parseFloat(night*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*121)).toFixed(2);
       var insurPER = parseFloat(insu*100).toFixed(2)/parseFloat(night+flightcost+insu+(price*121)).toFixed(2);
@@ -448,7 +461,7 @@ $(document).ready(function($) {
       break
   }
 
-
+  //Setting the graph with calculated value of % for graphs at the end
   $(".graph1").css("height",flightPER+"%");
   $(".graph1").attr({'data-original-title' : flightPER.toFixed(1)+"%"});
   $("#label1").text("Flight ticket - " + flightPER.toFixed(1)+"%");
